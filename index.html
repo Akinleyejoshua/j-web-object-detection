@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Detection</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- font library -->
+    <link rel="stylesheet" href="/font-awesome/css/all.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Object Detection System</h1>
+        <a href="https://twitter.com/AkinleyeJoshua9" target="_blank" class="fab fa-twitter"> Follow me</a>
+    </header>
+
+    <main>
+        <div class="heading">
+            <h2>Select Capture Type</h2>
+            <p>choose from the options where you want to capture from</p>
+        </div>
+
+        <div class="btn-options tab-links">
+            <div class="items">
+                <div class="item tab-link" id="webcam">
+                    <i class="fa fa-camera"></i>
+                    <p>Device Camera</p>
+                </div>
+                <div class="item tab-link" id="image">
+                    <i class="fa fa-image"></i>
+                    <p>Image File</p>
+                </div>
+                <div class="item tab-link" id="video">
+                    <i class="fa fa-video"></i>
+                    <p>Video File</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pages">
+            <div class="heading">
+                <p>jpg , mp4, png files  <i class="fa fa-arrow-down"></i></p>
+                <input type="file" class="file-source">
+            </div>
+
+            <h2 id="msg">Loading Model...</h2>
+
+            <div class="tab-page" id="tab-webcam">
+                <div class="live-view">
+                    <div class="detector">
+                        <div class="overlay"></div>
+                    </div>
+                    <video class="webcam" autoplay></video>
+                </div>
+            </div>
+            <div class="tab-page" id="tab-image">
+                <div class="live-view">
+                    <div class="detector">
+                        <div class="overlay"></div>
+                    </div>
+                    <img class="web-image">
+                </div>
+            </div>
+            <div class="tab-page" id="tab-video">
+                <div class="live-view">
+                    <div class="detector">
+                        <div class="overlay"></div>
+                    </div>
+                    <video class="web-video" autoplay>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- <footer>
+        <p>Follow me on <a href="https://twitter.com/AkinleyeJoshua9" target="_blank">Twitter</a></p>
+    </footer> -->
+
+    <!-- scripts tag -->
+    <!-- <script src="./tensorflow.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script> -->
+    <script src="./coco-ssd.js"></script>
+    <script src="./jquery.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
